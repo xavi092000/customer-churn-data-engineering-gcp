@@ -71,7 +71,7 @@ flowchart TD
   O -.-> T
 ```
 
-[Explore the GCP architecture (PDF)](architecture/gcp_customer_churn_architecture.pdf)
+[Explore the GCP architecture (PDF)](gcp_customer_churn_architecture.pdf)
 
 The design connects three source delivery patterns—change capture, append feeds, and full snapshots—to a BigQuery transformation pipeline. Cloud Storage provides a raw-delivery retention layer; Airflow coordinates dependencies, retry policies, source readiness, and backfills.
 
@@ -81,16 +81,16 @@ The source specifications cover eight business domains: customer profiles, subsc
 
 The resulting monthly feature table includes customer tenure, customer type, credit score, usage volume, active contracts, payment behavior, support activity, satisfaction measures, failed requests, and service-location information.
 
-[Explore source tables and columns (Excel)](docs/source_data_specifications.xlsx)
+[Explore source tables and columns (Excel)](source_data_specifications.xlsx)
 
 ## Repository contents
 
 | Path | Contents |
 | --- | --- |
-| [`sql/mart_churn_features_flat.sql`](sql/mart_churn_features_flat.sql) | BigQuery Standard SQL transformations, validations, and transactional publication |
-| [`architecture/gcp_customer_churn_architecture.pdf`](architecture/gcp_customer_churn_architecture.pdf) | GCP data architecture and orchestration design |
-| [`docs/historical_changes_and_resilience.pdf`](docs/historical_changes_and_resilience.pdf) | Historical-data management and recovery decisions |
-| [`docs/source_data_specifications.xlsx`](docs/source_data_specifications.xlsx) | Source schemas, fields, and ingestion characteristics |
+| [`mart_churn_features_flat.sql`](mart_churn_features_flat.sql) | BigQuery Standard SQL transformations, validations, and transactional publication |
+| [`gcp_customer_churn_architecture.pdf`](gcp_customer_churn_architecture.pdf) | GCP data architecture and orchestration design |
+| [`historical_changes_and_resilience.pdf`](historical_changes_and_resilience.pdf) | Historical-data management and recovery decisions |
+| [`source_data_specifications.xlsx`](source_data_specifications.xlsx) | Source schemas, fields, and ingestion characteristics |
 
 ## Executing the SQL
 
